@@ -1,0 +1,96 @@
+@font-face {
+font-family: 'Miso';
+font-style: normal;
+font-weight: normal;
+src: local('Miso'), url('miso.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Miso Light';
+font-style: normal;
+font-weight: normal;
+src: local('Miso Light'), url('miso-light.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Miso Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Miso Bold'), url('miso-bold.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Miso';
+  font-style: normal;
+  font-weight: normal;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdde7e;
+}
+
+.card {
+  width: 360px;
+  height: 441px;
+  background-color: white;
+  border-radius: 5px;
+  /* box-shadow: 0 5px 10px rgba(0,0,0,0.1); */
+  margin: 15px;
+  z-index: 2;
+}
+
+.card:before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 360px;
+  height: 441px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transform-origin: center;
+  transition: all 0.5s linear;
+}
+
+.card:hover::before {
+  transform: scaleY(1.2);
+}
+
+.cost {
+  color: green;
+  font-size: 70px;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.image {
+  text-align: center;
+  margin-bottom: 29px;
+}
+
+.kind {
+  font-size: 56px;
+  color: #333333;
+  text-align: center;
+}
+
+.description {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 156px;
+  font-size: 26px;
+  color: #333333;
+}
